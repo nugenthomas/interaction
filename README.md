@@ -34,6 +34,7 @@ Go ahead and set up 3 fields like this for name, city, and favorite color.
 Once you're done you should see three blank text fields on the webpage, all smushed together. 
 
 **2: Label the fields**
+
 Now we need to tell the user what these fields are for. We can do this with regular text labels. The way you do that in p5 is by creating an HTML element. You can use any type of text element, such as an `h1`,`h2`,`p`, or `span`. In this example we'll use an `h2`. You create elements using the `createElement()` function. It takes two parameters: the name of the element, and your text. Note that you'll have to surround both with quotes. And if your sentence has an apostrophe you'll want to use double quotes.
 
 `nameLabel = createElement("h2", "What's your name?");`
@@ -43,9 +44,11 @@ This draws the text on the page. Note that you don't have to save the element to
 Go ahead and label all three fields. Remember to define all your label variables as global variables first, outside of the `setup()` function. You'll also see that these HTML elements get drawn in the order you write them, so you're going to want to put the label right before its respective field.
 
 **3: Add a submit button**
+
 Next we need a button to submit the form. p5 has a function called `createButton()` for this, that takes the text on the button as a parameter. You'll want to surround your text in quotes since it is a string, and also save the button to a new global variable so you can reference it later.
 
 **4: Add an event listener**
+
 Your form is built, but it doesn't do anything when you click that button. That's because you haven't attached an event listener to the button yet. Event listeners are functions that wait for a specific type of event to happen, and then call some other block of code when that event happens. 
 
 There are a few different event listeners in p5, but the one we need is `mousePressed()` to know if the mouse clicked on the button. The way we use this function, is as a method on our button variable, like this:
@@ -55,6 +58,7 @@ There are a few different event listeners in p5, but the one we need is `mousePr
 Note that I've passed it `makeProfile` as a parameter. That's the name of the function I want it to call when the button is clicked. You could call this function anything you want.
 
 **5: Write the makeProfile function**
+
 Our button is calling the makeProfile function, but it's going to throw an error because that function doesn't exist yet. We have to create it. Remember, we write functions like this:
 
     function makeProfile(){
@@ -88,6 +92,7 @@ And you can adjust the CSS of that element using the `style()` method, which tak
 `nameElement.style("color",submittedColor);`
 
 **8: Get creative**
+
 Try using a for loop to write their name and/or city over and over again. You can randomly set the position of x and y using `random(windowWidth)` or `random(windowHeight)`.
 
 Or try changing the size of the text using the CSS font-size property:
@@ -97,6 +102,7 @@ Or try changing the size of the text using the CSS font-size property:
 Take a look at the reference at the bottom of these instructions for more things you can do with HTML elements.
 
 **9: Style your form**
+
 Go back to your form and give it some color and style. Some CSS properties you might want to try are `font-family`, `font-size`, `color`, `background-color`, `border`, `border-radius`,`box-shadow` and `font-weight`.
 
 
@@ -107,6 +113,7 @@ Go back to your form and give it some color and style. Some CSS properties you m
  - Add a button to the profile page to bring back the form so the user can fill out a new profile. You can un-hide elements using the `.show()` function. 
 
 **Reference**
+
 For a full list of methods and how to use them visit: 
 http://p5js.org/reference/#/libraries/p5.dom
 
