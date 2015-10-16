@@ -1,0 +1,38 @@
+var button;
+
+function setup(){
+
+noCanvas();
+	
+	button = createButton("do something");
+
+	//button.position(433,430);
+	button.mouseOver(isHovering);
+	button.mouseOut(isNotHovering);
+	button.mousePressed(clicked);
+
+}
+
+function isHovering(){
+	button.style("background-color","red");
+}
+
+function isNotHovering(){
+	button.style("background-color","white");
+}
+
+function clicked(){
+	var thebody = select("body");
+var randomR = Math.floor(random(255));
+var randomG = Math.floor(random(255));
+
+var randomB = Math.floor(random(255));
+
+
+
+	random(255);
+	var rgbColor = "rgb("+randomR+","+randomG+","+randomB+")";
+console.log(rgbColor);
+
+	thebody.style("background-color","green");
+}
